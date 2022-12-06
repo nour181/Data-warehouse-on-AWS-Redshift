@@ -10,8 +10,8 @@ Sparkify is a music streaming startup, Sparkify decided to move its work to clou
 ### Datasets:
 
 we are working on two datasets:
-1) Log Data: data contains loging activities of Sparkify users
-2) Song Data: contains informations and metadata about songs and thier artists
+1) Log Data: data contains loging activities of Sparkify users(data is on AWS S3 Bucket)
+2) Song Data: contains informations and metadata about songs and thier artists(data is on AWS S3 Bucket)
 Note about song data files: json files are partitioned by the first three letters of each song's track ID
 
 
@@ -44,3 +44,21 @@ first we will create our tables on sql_queries.py file, after that we will run c
 1) sql_queries.py: contains sql queries for droping existing tables, creating staging and star schema tables
 2) create_tables.py: include functions to create staging tables and star schema tables and drop previous tables
 3) etl.py: contains functions to load data from s3 bucket into staging tables and inserting data into the five tables
+
+
+#### Note:
+we will use .cfg file to save our important variables 
+[CLUSTER]
+HOST=
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+DB_PORT=
+
+[IAM_ROLE]
+ARN= IAM_Role URL
+
+[S3]
+LOG_DATA=
+LOG_JSONPATH=
+SONG_DATA=

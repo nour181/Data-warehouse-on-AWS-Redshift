@@ -48,6 +48,7 @@ first we will create our tables on sql_queries.py file, after that we will run c
 
 #### Note:
 we will use .cfg file to save our important variables 
+
 [CLUSTER]
 
 HOST=
